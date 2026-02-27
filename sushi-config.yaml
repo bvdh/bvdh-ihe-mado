@@ -68,29 +68,13 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
-#
-# The parameters property represents IG.definition.parameter. Rather
-# than a list of code/value pairs (as in the ImplementationGuide
-# resource), the code is the YAML key. If a parameter allows repeating
-# values, the value in the YAML should be a sequence/array.
-# For parameters defined by core FHIR see:
-# http://build.fhir.org/codesystem-guide-parameter-code.html
-# For parameters defined by the FHIR Tools IG see:
-# http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
-#
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
-#
+pages:
+  index.md:
+    title: Imaging Manifest for DICOM Objects (MADO) Implementation Guide
+  # Volume 3:
+  manifest-envelop.md: Manifest Envelopes for IHE-MHD
+  download.md: Download
+
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
@@ -100,9 +84,16 @@ dependencies:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
-  Artifacts: artifacts.html
+  MADO Home: index.html
+  Volume 1: 
+    Introductions: index.html
+  # Volume 2:
+  Volume 3: 
+    IHE-MHD Manifest Envelopes: manifest-envelop.html
 
+  Artifacts: artifacts.html
+  Download: download.html
+  
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
