@@ -11,7 +11,7 @@ This profile defines the WADO endpoint for accessing imaging study content.
 * payloadType.text = "DICOM WADO-RS" // GET proper code for this
 
 * payloadMimeType
-  * insert SliceElement( #value, type )
+  * insert SliceElement( #value, $this )
 * payloadMimeType contains 
       // source dicom
       dicom 1..1 and 

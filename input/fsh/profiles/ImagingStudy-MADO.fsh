@@ -53,4 +53,4 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 Invariant: MadoImagingStudy-endpoint-required
 Description: "An endpoint reference is required for each series in the ImagingStudy, or for the ImagingStudy itself if there are no series."
 Severity: #error
-Expression: "endpoint.exists() or series.endpoint($this.exists())"
+Expression: "endpoint.exists() or series.endpoint.all($this.exists())"

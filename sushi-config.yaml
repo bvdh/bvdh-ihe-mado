@@ -72,8 +72,12 @@ pages:
   index.md:
     title: Imaging Manifest for DICOM Objects (MADO) Implementation Guide
   # Volume 3:
-  manifest-envelop.md: Manifest Envelopes for IHE-MHD
-  download.md: Download
+  mapping.md:
+    title: Mappings between MADO FHIR and MADO DICOM KOS
+  manifest-envelop.md:
+    title: Manifest Envelopes for IHE-MHD
+  download.md: 
+    title: Download
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
