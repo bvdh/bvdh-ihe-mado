@@ -1,0 +1,60 @@
+Profile: MadoFhirMinimalDocumentReference
+Parent: IHE.MHD.Minimal.DocumentReference
+Title: "MADO FHIR Minimal DocumentReference Profile for FHIR Imaging Manifests"
+* insert SetFmmAndStatusRule( 1, draft )
+* insert CommonMhdDocumentReferenceFields
+
+* relatesTo 
+  * insert SliceElement( #value, code )
+* relatesTo contains fhirReference 0..1
+* relatesTo[fhirReference] 
+  * ^short = "Reference to the DocumentReference resource that contains the DICOM KOS manifest that corresponds to this imaging report in FHIR format"
+  * code = #transforms
+  * target only Reference( MadoDicomKosMinimalDocumentReference )
+
+// content profile representation
+* content 1..1
+  * extension contains  http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile named profile 1..*
+  * extension[profile]
+    * ^short = "Contains the profile of the referred report"
+    * extension[value[x]]
+      * valueCanonical = Canonical( MadoFhirBundle )
+
+
+Profile: MadoDicomKosMinimalDocumentReference
+Parent: IHE.MHD.Minimal.DocumentReference
+Title: "MADO FHIR Minimal DocumentReference Profile for KOS based Imaging Manifests"
+* insert SetFmmAndStatusRule( 1, draft )
+* insert CommonMhdDocumentReferenceFields
+
+* relatesTo 
+  * insert SliceElement( #value, $this )
+* relatesTo contains fhirReference 0..1
+* relatesTo[fhirReference] 
+  * ^short = "Reference to the DocumentReference resource that contains the FHIR manifest that corresponds to this imaging report in DICOM KOS format"
+  * code = #transforms
+  * target only Reference( MadoFhirMinimalDocumentReference )
+
+  
+
+RuleSet: CommonMhdDocumentReferenceFields
+// bodysite
+* extension contains $CrossVersion-R5-DocumentReference.bodySite-for-R4 named bodysite 0..1 
+* extension[bodysite].extension[concept] 1..1
+* extension[bodysite].extension[concept]
+  * valueCodeableConcept from ValueSetAnatomicalRegion (extensible)
+  * ^short = "The anatomical region of the patient that is the focus of the imaging manifest, concept field is required."
+  * ^definition = "This field may be used to provide additional information about the anatomical region of interest for the imaging manifest."
+
+// // modality
+* extension contains $CrossVersion-R5-DocumentReference.modality-for-R4 named modality 1..1 
+
+// study Instance UID and accession number
+* context 1..1
+  * related 
+    * insert SliceElement( #value, identifier )
+  * related contains study-instance-uid 1..1 and accession-number 0..1
+  * related[study-instance-uid] only MadoReferencedStudyInstanceUidIdentifier
+    * ^short = "The Study Instance UID of the imaging study that is the focus of the imaging manifest, represented as an Identifier with a fixed system and a value that corresponds to the Study Instance UID."
+  * related[accession-number] only MadoReferencedAccessionNumberIdentifier
+    * ^short = "The Accession Number of the imaging study that is the focus of the imaging manifest, represented as an Identifier with a fixed system and a value that corresponds to the Accession Number."
