@@ -17,14 +17,14 @@ report, the clinical specialty, and the anatomical region of interest.
     imaging-study 1..1 and
     patient 0..1 and
     endpoint 0..* and
-    author 1..1 and
+    creator 1..1 and
     requested-procedure 0..* and
     performed-procedure 0..* 
 * entry[imaging-study].resource only MadoImagingStudy
   * ^short = "Imaging Study holding information on the structure of the study."
 * entry[patient].resource only Patient
   * ^short = "Patient the study is about."
-* entry[author].resource only MadoAuthor
+* entry[creator].resource only MadoCreator
   * ^short = "Information on the author of the study."
 * entry[endpoint].resource only Endpoint
   * ^short = "Endpoint holding information on how to retrieve the study data."

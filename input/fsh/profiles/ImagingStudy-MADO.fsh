@@ -13,12 +13,14 @@ constraints and extensions specific to the MADO context, such as the type of ima
 * identifier contains study-instance-uid 1..1
 * identifier[study-instance-uid] only MadoStudyInstanceUidIdentifier
 
-* extension contains MadoAnatomicalRegionExtension named anatomical-region 0..*
+* extension contains MadoAnatomicalRegionExtension named anatomical-region 0..* and MadoCreatorExtension named creator 1..1
 * extension[anatomical-region] ^short = "The anatomical regions covered by the study."
 * extension[anatomical-region] ^definition = """
 The anatomical regions covered by the study, depending on the study there can be zero, one or more regions. 
 The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.bodysite`.
 """
+* extension[creator] ^short = "The creator of the MADO, which is the device that created the ImagingStudy resource in the MADO context."
+
 * subject 1..1
 * basedOn
   * insert SliceElement( #type, $this )

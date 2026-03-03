@@ -6,8 +6,8 @@
 id: ihe.rad.mado
 canonical: https://profiles.ihe.net/RAD/MADO
 name: IHE_RAD_MADO
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: "Mobile Access to DICOM Objects (MADO)"
+description: ImplementationGuide for IHE IT Radiology Technical Framework Supplement Mobile Access to DICOM Objects (MADO)
 status: draft # draft | active | retired | unknown
 version: 0.1.0-SNAPSHOT
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -71,11 +71,18 @@ dependencies:
 pages:
   index.md:
     title: Imaging Manifest for DICOM Objects (MADO) Implementation Guide
-  # Volume 3:
-  mapping.md:
-    title: Mappings between MADO FHIR and MADO DICOM KOS
-  manifest-envelop.md:
-    title: Manifest Envelopes for IHE-MHD
+  volume1.md:
+    title: Volume 1
+  volume2.md:
+    title: Volume 2
+  volume3.md:
+    title: Volume 3
+    fhir-imaging-manifest.md:
+      title: FHIR Imaging Manifest
+    mapping.md:
+      title: Mappings between MADO FHIR and MADO DICOM KOS
+    manifest-envelop.md:
+      title: Manifest Envelopes for IHE-MHD
   download.md: 
     title: Download
 
@@ -89,12 +96,12 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   MADO Home: index.html
-  Volume 1: 
-    Introductions: index.html
-  # Volume 2:
+  Volume 1: volume1.html
+  Volume 2: volume2.html
   Volume 3: 
+    FHIR Imaging Manifest: fhir-imaging-manifest.html
+    Mappings between MADO FHIR and MADO DICOM KOS: mapping.html
     IHE-MHD Manifest Envelopes: manifest-envelop.html
-
   Artifacts: artifacts.html
   Download: download.html
   

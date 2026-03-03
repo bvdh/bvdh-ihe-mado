@@ -14,7 +14,7 @@ The figure below shows the `MHD DocumentReference`s {% include profile-link.html
 The main choices illustrated in the figure are:
 
 * There are two different DocumentReferences, one for the FHIR and one for the DICOM KOS representation. When both are present, the relatesTo field points to the other representation.
-* A FHIR manifest is represented as a FHIR json encoded FHIR {{Bundle}} following the profile {% include profile-link.html name="ImImagingStudyManifest" %}. This Bundle contains the {{ImagingStudy}} resource as well other resources such as the {{Patient}} and various {{Endpoint}}s.
+* A FHIR manifest is represented as a FHIR json encoded FHIR {{Bundle}} following the profile {% include profile-link.html name="MadoFhirBundle" %}. This Bundle contains the {{ImagingStudy}} resource as well other resources such as the {{Patient}} and various {{Endpoint}}s.
 * A KOS manifest is represented as a DICOM encoded DICOM instance following the MADO KOS profile.
 
 The FHIR-manifest can be losslessly translated into the KOS-manifest and vice-versa allowing applications to change the representation when needed.
