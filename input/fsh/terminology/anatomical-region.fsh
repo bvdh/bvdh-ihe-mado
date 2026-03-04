@@ -12,4 +12,4 @@ Description:   """A shortlist of anatomical regions that can be used for searchi
 * $sct#113257007 // Cardiovascular system Structure of cardiovascular system
 * $sct#80891009  // Heart Heart
 * $sct#76752008  // Breast Breast structure
-* $sct#737561001 // Spine* Structure of vertebral column and/or spinal cord
+* $sct#1141981001 // Vertebral Column 
