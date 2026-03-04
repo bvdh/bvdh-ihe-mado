@@ -39,8 +39,8 @@ Title: "MADO FHIR Minimal DocumentReference Profile for KOS based Imaging Manife
   * ^short = "Reference to the DocumentReference resource that contains the FHIR manifest that corresponds to this imaging report in DICOM KOS format"
   * code = #transforms
   * target only Reference( MadoFhirMinimalDocumentReference )
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#1.2.840.10008.5.1.4.1.1.88.59
-  
+* content.format = http://dicom.nema.org/resources/ontology/DCMUID#1.2.840.10008.5.1.4.1.1.88.59	"Key Object Selection Document"
+
 
 RuleSet: CommonMhdDocumentReferenceFields
 // bodysite
