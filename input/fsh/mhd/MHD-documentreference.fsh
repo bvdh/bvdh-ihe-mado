@@ -11,6 +11,11 @@ Title: "MADO FHIR Minimal DocumentReference Profile for FHIR Imaging Manifests"
   * ^short = "Reference to the DocumentReference resource that contains the DICOM KOS manifest that corresponds to this imaging report in FHIR format"
   * code = #transforms
   * target only Reference( MadoDicomKosMinimalDocumentReference )
+// category EU EEHRxFDocumentTypeMedicalImagingVS#Medical-Imaging
+// type $loinc 18748-4/
+//    $loinc#18748-4 "Diagnostic imaging study"
+//    $loinc#85430-7 "Diagnostic imaging report - example sections and entries"
+
 
 // content profile representation
 * content 1..1
@@ -19,7 +24,7 @@ Title: "MADO FHIR Minimal DocumentReference Profile for FHIR Imaging Manifests"
     * ^short = "Contains the profile of the referred report"
     * extension[value[x]]
       * valueCanonical = Canonical( MadoFhirBundle )
-
+* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:rad:MADO:fhir-manifest:2026" // pending
 
 Profile: MadoDicomKosMinimalDocumentReference
 Parent: IHE.MHD.Minimal.DocumentReference
@@ -34,7 +39,7 @@ Title: "MADO FHIR Minimal DocumentReference Profile for KOS based Imaging Manife
   * ^short = "Reference to the DocumentReference resource that contains the FHIR manifest that corresponds to this imaging report in DICOM KOS format"
   * code = #transforms
   * target only Reference( MadoFhirMinimalDocumentReference )
-
+* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#1.2.840.10008.5.1.4.1.1.88.59
   
 
 RuleSet: CommonMhdDocumentReferenceFields
