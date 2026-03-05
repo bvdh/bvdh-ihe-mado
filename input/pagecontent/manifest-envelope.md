@@ -1,14 +1,11 @@
 {% include aliases.md %}
 
-Part of the information related to accessing the content is part of the envelope in which the manifest is 
-distributed. In the case of using {{IHE-MHD}}, the envelope used in a DocumentReference.
+The following MHD DocumentReferences SHALL be used when distributing a MADO Imaging Manifest in an {{iheMHD}} environment:
 
-The Profile for document reference to publish imaging manifests is documented in {{MadoFhirMinimalDocumentReference}} and {{MadoDicomKosMinimalDocumentReference}}.
-.
+* {{MadoFhirMinimalDocumentReference}} for FHIR Manifests 
+* {{MadoDicomKosMinimalDocumentReference}} for DICOM KOS Manifests
 
-The figure below shows the `MHD DocumentReference`s {{MadoFhirMinimalDocumentReference}} and 
-{{MadoDicomKosMinimalDocumentReference}} including the most relevant restrictions and its relationship 
-with the manifests and each other.
+The figure below shows the `MHD DocumentReference`s including the most relevant restrictions and its relationship with the manifests and each other.
 
 {% include img.html img="manifest-envelope.drawio.svg" caption="Figure: IHE-MHD envelope" %}
 
@@ -20,6 +17,8 @@ The main choices illustrated in the figure are:
 * A KOS manifest is represented as a DICOM encoded DICOM instance following the MADO KOS profile.
 
 The FHIR-manifest can be translated into the KOS-manifest and vice-versa allowing applications to change the representation when needed.
+
+{% include stunote.html text="In this specification the choice for presenting the manifest in an IHE-MHD environment is representing them as two separate DocumentReference instances. Feedback is requested from the implementer community whether this is the approach is correct and adequate."%}
 
 ### Related FHIR profiles
 

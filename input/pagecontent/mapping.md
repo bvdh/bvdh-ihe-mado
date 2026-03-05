@@ -4,8 +4,8 @@ The mapping between the DICOM KOS and FHIR format is presented in the table belo
 characterization of the concept. The other two columns show the corresponding FHIR and DICOM KOS fields. In the case that more than one field is presented, it is
 expected that the concept will be present in each of them.
 
+**Table 4.3-1: MADO DICOM KOS <-> FHIR mapping**
 {:.grid}
-
 | Concept  | FHIR   | KOS      | Notes |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | Study Study Instance UID | MadoImagingStudy.identifier[studyInstanceUid]  | GeneralStudy StudyInstanceUID  +  KeyObjectDocument-Referenced Request Sequence-Study Instance UID   |  |
