@@ -1,6 +1,10 @@
 Profile: MadoFhirMinimalDocumentReference
 Parent: IHE.MHD.Minimal.DocumentReference
-Title: "MADO FHIR Minimal DocumentReference Profile for FHIR Imaging Manifests"
+Title: "MADO MHD DocumentReference Profile for FHIR Imaging Manifests"
+Description: """
+MADO specific profile for the IHE-MHD Minimal Document Reference for MADO FHIR Manifests that includes the MADO specific content format, the extensions
+related to body-site and modality, and the definition on where `StudyInstanceUID` and `AccessionNumber` are stored.
+"""
 * insert SetFmmAndStatusRule( 1, draft )
 * insert CommonMhdDocumentReferenceFields
 
@@ -28,7 +32,11 @@ Title: "MADO FHIR Minimal DocumentReference Profile for FHIR Imaging Manifests"
 
 Profile: MadoDicomKosMinimalDocumentReference
 Parent: IHE.MHD.Minimal.DocumentReference
-Title: "MADO FHIR Minimal DocumentReference Profile for KOS based Imaging Manifests"
+Title: "MADO MHD DocumentReference Profile for DICOM KOS Imaging Manifests"
+Description: """
+MADO specific profile for the IHE-MHD Minimal Document Reference for MADO DICOM KOS Manifests that includes the MADO specific content format, the extensions
+related to body-site and modality, and the definition on where `StudyInstanceUID` and `AccessionNumber` are stored.
+"""
 * insert SetFmmAndStatusRule( 1, draft )
 * insert CommonMhdDocumentReferenceFields
 

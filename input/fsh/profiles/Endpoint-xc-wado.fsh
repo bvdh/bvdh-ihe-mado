@@ -5,11 +5,13 @@ Description: """
 This profile defines the XC-WADO endpoint for accessing imaging study content.
 It is a regular WADO endpoint with an additional extension that holds the `locationUID` of the domain where the content can be 
 accessed. See the IHE XC-WADO specification for more details.
-Note that in XC-WADO the address is optional. When no address is known, that will be signaled using a data absent exception with the code `not-applicable`.
+Note that in XC-WADO the address is optional. When no address is known, a placeholder value is inserted and a data absent exception with the code `not-applicable`.
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
 * extension contains XcWadoLocationUIDExtension named locationUid 1..1
-  
+* address.extension contains http://hl7.org/fhir/StructureDefinition/data-absent-reason named dataAbsentReason 0..1
+  * ^short = "This extension is present when the address value is a placeholder and should not be used."
+
 Extension: XcWadoLocationUIDExtension
 Title: "Extension: Location UID"
 Description: """

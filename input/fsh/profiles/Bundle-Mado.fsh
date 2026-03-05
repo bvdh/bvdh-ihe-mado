@@ -1,5 +1,6 @@
 Profile: MadoFhirBundle
 Parent: Bundle
+Title: "MADO FHIR Bundle"
 Description: """
 Profile for FHIR Bundles used in the MADO context. This profile is used for the FHIR Bundles that 
 represent imaging manifests using the DICOM KOS format in the MADO context. It includes additional
