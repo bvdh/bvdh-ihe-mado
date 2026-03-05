@@ -1,20 +1,22 @@
-{% include variable-definitions.md %}
+{% include aliases.md %}
 
-Part of the information related to accessing the content is part of the envelope in which the manifest is distributed. In the case of using {{IHE-MHD}}, the envelope used in a DocumentReference.
+Part of the information related to accessing the content is part of the envelope in which the manifest is 
+distributed. In the case of using {{IHE-MHD}}, the envelope used in a DocumentReference.
 
-The Profile for document reference to publish imaging manifests is documented in {% include profile-link.html name="MadoFhirMinimalDocumentReference" %} and
-{% include profile-link.html name="MadoDicomKosMinimalDocumentReference" %}.
+The Profile for document reference to publish imaging manifests is documented in {{MadoFhirMinimalDocumentReference}} and {{MadoDicomKosMinimalDocumentReference}}.
 .
 
-The figure below shows the `MHD DocumentReference`s {% include profile-link.html name="MadoFhirMinimalDocumentReference" %} and 
-{% include profile-link.html name="MadoDicomKosMinimalDocumentReference" %} including the most relevant restrictions and its relationship with the manifests and each other.
+The figure below shows the `MHD DocumentReference`s {{MadoFhirMinimalDocumentReference}} and 
+{{MadoDicomKosMinimalDocumentReference}} including the most relevant restrictions and its relationship 
+with the manifests and each other.
 
 {% include img.html img="manifest-envelope.drawio.svg" caption="Figure: IHE-MHD envelope" %}
+
 
 The main choices illustrated in the figure are:
 
 * There are two different DocumentReferences, one for the FHIR and one for the DICOM KOS representation. When both are present, the relatesTo field points to the other representation.
-* A FHIR manifest is represented as a FHIR json encoded FHIR {{Bundle}} following the profile {% include profile-link.html name="MadoFhirBundle" %}. This Bundle contains the {{ImagingStudy}} resource as well other resources such as the {{Patient}} and various {{Endpoint}}s.
+* A FHIR manifest is represented as a FHIR json encoded FHIR {{Bundle}} following the profile {{MadoFhirBundle}}. This Bundle contains the {{ImagingStudy}} resource as well other resources such as the {{Patient}} and various {{Endpoint}}s.
 * A KOS manifest is represented as a DICOM encoded DICOM instance following the MADO KOS profile.
 
 The FHIR-manifest can be translated into the KOS-manifest and vice-versa allowing applications to change the representation when needed.

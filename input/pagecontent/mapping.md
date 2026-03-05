@@ -1,5 +1,4 @@
-
-{% include variable-definitions.md %}
+{% include aliases.md %}
 
 The mapping between the DICOM KOS and FHIR format is presented in the table below. In order to make it clear what concept is addressed, the first column contains a short
 characterization of the concept. The other two columns show the corresponding FHIR and DICOM KOS fields. In the case that more than one field is presented, it is

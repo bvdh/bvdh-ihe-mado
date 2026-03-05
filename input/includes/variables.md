@@ -7,9 +7,10 @@
 {% assign XtEhrImagingHtml  = '<a href="https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/useCaseMedicalImages.html)">XtEHR Imaging Logical Model</a>' %}
 
 {% assign iheRad            = "[IHE-RAD](https://profiles.ihe.net/RAD/)" %}
-{% assign iheIid            = "[IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf)" %}
-{% assign iheIDR            = "[IHE-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/)" %}
-{% assign iheMHD            = "[IHE-MHD](https://profiles.ihe.net/ITI/MHD/)" %}
+{% assign iheIid            = "[IHE-RAD-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf)" %}
+{% assign iheIDR            = "[IHE-RAD-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/)" %}
+{% assign iheMHD            = "[IHE-ITI-MHD](https://profiles.ihe.net/ITI/MHD/)" %}
+{% assign iheXcWado        = "[IHE-RAD-XC-WADO](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD-Suppl_XC-WADO.pdf)" %}
 
 {% assign hl7EuBase         = "[HL7 EU Base](https://build.fhir.org/ig/hl7-eu/base-r5/)" %}
 {% assign hl7EuExtensions   = "[HL7 Europe Extensions](https://build.fhir.org/ig/hl7-eu/extensions-r5/)" %}
@@ -25,4 +26,3 @@
 {% assign usCore            = "[US core v7.0.0](https://hl7.org/fhir/us/core/STU7/)" %}
 {% assign dicomSr2fhir      = "[DICOM-SR-2-FHIR](https://build.fhir.org/ig/HL7/dicom-sr/)" %}
 
-{% include fhir-resources.md %}
