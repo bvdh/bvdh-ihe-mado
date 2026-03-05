@@ -79,10 +79,10 @@ pages:
     title: Volume 3
     fhir-imaging-manifest.md:
       title: FHIR Imaging Manifest
-    mapping.md:
-      title: Mappings between MADO FHIR and MADO DICOM KOS
     manifest-envelope.md:
       title: Manifest Envelopes for IHE-MHD
+    mapping.md:
+      title: Mappings between MADO FHIR and MADO DICOM KOS
   download.md: 
     title: Download
 
@@ -100,8 +100,8 @@ menu:
   Volume 2: volume2.html
   Volume 3: 
     FHIR Imaging Manifest: fhir-imaging-manifest.html
-    Mappings between MADO FHIR and MADO DICOM KOS: mapping.html
     IHE-MHD Manifest Envelopes: manifest-envelope.html
+    Mappings between MADO FHIR and MADO DICOM KOS: mapping.html
   Artifacts: artifacts.html
   Download: download.html
   

@@ -17,7 +17,7 @@ report, the clinical specialty, and the anatomical region of interest.
 * entry contains
     imaging-study 1..1 and
     patient 0..1 and
-    endpoint 0..* and
+    endpoint 1..* and
     creator 1..1 and
     requested-procedure 0..* and
     performed-procedure 0..* 

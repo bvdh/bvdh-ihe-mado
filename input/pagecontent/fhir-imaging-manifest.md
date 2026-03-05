@@ -8,7 +8,9 @@ The figure below presents an overview of the data that is part of the imaging-ma
 
 {% include img.html img="fhir-manifest-overview.drawio.svg" caption="Figure: FHIR Manifest Overview" %}
 
-The manifest is a FHIR bundle that SHALL conform to the {{MadoFhirBundle}} profile. It includes the {{MadoImagingStudy}} resource, the {{DeviceAuthor}} and at least one {{Endpoint}}.
+The manifest is a FHIR bundle that SHALL conform to the {{MadoFhirBundle}} profile. This `Bundle` includes the {{MadoImagingStudy}} resource, the {{DeviceAuthor}}, at least one {{Endpoint}} and additional resources. The `Bundle` SHALL contain all available data elements mentioned in the [DICOM KOS <-> FHIR mappings](mapping.html) overview.
+
+{% include stunote.html text="Feedback is requested from the implementer community whether we need to highlight these fields more explicitly and how (e.g. using FHIR obligations)."%}
 
 {{Endpoint}} resources contain the information that allows the client to access the DICOM data. The current model identifies two different {{Endpoint}}s:
 
@@ -17,12 +19,12 @@ The manifest is a FHIR bundle that SHALL conform to the {{MadoFhirBundle}} profi
 
 The {{DeviceAuthor}} profile provides information on the system that generated the manifest.
 
-Besides the {{ImagingStudy}} and {{Endpoint}} resources, also additional resources are present that reflect information present in DICOM such as information on the patient, performer, procedure and imaging device.
+Besides the {{ImagingStudy}} and {{Endpoint}} resources, also additional resources are present that reflect information present in DICOM such as information on the patient, performer, procedure and imaging device. What resources to include depends on the information to be included, see [DICOM KOS <-> FHIR mappings](mapping.html) for more information on when to include what resource.
 
 ### Related FHIR profiles
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND ( Name NOT LIKE '%DocumentReference' )",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND ( Name NOT LIKE '%DocumentReference' ) ORDER BY name ASC",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},

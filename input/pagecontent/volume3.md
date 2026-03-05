@@ -1,1 +1,1 @@
-{% include stunote.html text="TBD: content to be copied from MADO word document."%}
+{% include stunote.html text="TBD: content to be copied from MADO word document or referred to."%}
