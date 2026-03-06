@@ -14,7 +14,7 @@ constraints and extensions specific to the MADO context, such as the value set f
     * insert SliceElement( #value, $this )
   * coding contains v2-0203-coding 1..1 and dcm 0..1
   * coding[v2-0203-coding] = $v2-0203#ACSN "Accession Id"
-  * coding[dcm].system = http://dicom.nema.org/resources/ontology/DCM#121022 "Accession Number"
+  * coding[dcm] = $dicomOntology#121022 "Accession Number"
 
 Profile: MadoReferencedAccessionNumberIdentifier
 Parent: Reference

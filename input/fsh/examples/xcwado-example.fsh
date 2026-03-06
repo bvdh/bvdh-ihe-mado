@@ -1,5 +1,6 @@
 Instance: EndpointXcWadoExample
 InstanceOf: MadoXcWadoEndpoint
+Usage: #example
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
 * status = #active
 * payloadType.text = "DICOM WADO-RS" // GET proper code for this

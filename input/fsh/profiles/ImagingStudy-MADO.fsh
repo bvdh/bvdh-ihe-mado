@@ -9,9 +9,10 @@ constraints and extensions specific to the MADO context, such as the type of ima
 * obeys MadoImagingStudy-endpoint-required
 * identifier 1..*
 * identifier
-  * insert SliceElement( #value, $this )
+  * insert SliceElement( #profile, $this )
 * identifier contains study-instance-uid 1..1
 * identifier[study-instance-uid] only MadoStudyInstanceUidIdentifier
+
 
 * extension contains MadoAnatomicalRegionExtension named anatomical-region 0..* and MadoCreatorExtension named creator 1..1
 * extension[anatomical-region] ^short = "The anatomical regions covered by the study."
