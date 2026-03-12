@@ -10,8 +10,8 @@ related to body-site and modality, and the definition on where `StudyInstanceUID
 
 * relatesTo 
   * insert SliceElement( #value, code )
-* relatesTo contains fhirReference 0..1
-* relatesTo[fhirReference] 
+* relatesTo contains kosReference 0..1
+* relatesTo[kosReference] 
   * ^short = "Reference to the DocumentReference resource that contains the DICOM KOS manifest that corresponds to this imaging report in FHIR format"
   * code = #transforms
   * target only Reference( MadoDicomKosMinimalDocumentReference )
@@ -41,7 +41,7 @@ related to body-site and modality, and the definition on where `StudyInstanceUID
 * insert CommonMhdDocumentReferenceFields
 
 * relatesTo 
-  * insert SliceElement( #value, $this )
+  * insert SliceElement( #value, code )
 * relatesTo contains fhirReference 0..1
 * relatesTo[fhirReference] 
   * ^short = "Reference to the DocumentReference resource that contains the FHIR manifest that corresponds to this imaging report in DICOM KOS format"
@@ -65,7 +65,7 @@ RuleSet: CommonMhdDocumentReferenceFields
 // study Instance UID and accession number
 * context 1..1
   * related 
-    * insert SliceElement( #value, identifier )
+    * insert SliceElement( #profile, identifier )
   * related contains study-instance-uid 1..1 and accession-number 0..1
   * related[study-instance-uid] only MadoReferencedStudyInstanceUidIdentifier
     * ^short = "The Study Instance UID of the imaging study that is the focus of the imaging manifest, represented as an Identifier with a fixed system and a value that corresponds to the Study Instance UID."
