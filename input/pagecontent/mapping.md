@@ -5,6 +5,7 @@ characterization of the concept. The other two columns show the corresponding FH
 expected that the concept will be present in each of them.
 
 **Table 4.3-1: MADO DICOM KOS <-> FHIR mapping**
+
 {:.grid}
 | Concept  | FHIR   | KOS      | Notes |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
