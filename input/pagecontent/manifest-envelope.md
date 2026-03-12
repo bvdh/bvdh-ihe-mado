@@ -5,6 +5,12 @@ The following MHD DocumentReferences SHALL be used when distributing a MADO Imag
 * {{MadoFhirMinimalDocumentReference}} for FHIR Manifests 
 * {{MadoDicomKosMinimalDocumentReference}} for DICOM KOS Manifests
 
+An IHE-MHD infrastructure may choose or not a mapping service between the two manifest formats. In the case it supports a mapping service, the address field in the unsupported DocumentReference to the mapping service that will return the translated document.
+
+In the case the manifest is available in multiple formats, the Document Consumer SHOULD show to the user a single entry representing all possible formats.
+
+As is stated in section X.6.1, Manifest Creators SHALL create the manifest in the format of their choice. The selection is made at deployment time (see section X.6.1 for more detail).
+
 The figure below shows the `MHD DocumentReference`s including the most relevant restrictions and its relationship with the manifests and each other.
 
 {% include img.html img="manifest-envelope.drawio.svg" caption="Figure: IHE-MHD envelope" %}
