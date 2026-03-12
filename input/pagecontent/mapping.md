@@ -18,21 +18,21 @@ expected that the concept will be present in each of them.
 | Study endpoint.locationUid | MadoImagingStudy.endpoint -> XcWadoEndpoint.extension[locationUid]  | KeyObjectDocument-CurrentRequestedProcedureEvidenceSequence-Retrieve URL      |  |
 | Study endpoint.url | MadoImagingStudy.endpoint -> XcWadoEndpoint.address  |       |  |
 | Study  series | MadoImagingStudy.series  |       |  |
-| Study  series.seriesUid | MadoImagingStudy.series.uid  |  SR-TID1602:EV (ddd006, DCM, “Series Instance UID”)     |  |
-| Study  series.number | MadoImagingStudy.series.number  |  SR-TID1602:EV (ddd005, DCM, “Series Number”)     |  |
+| Study  series.seriesUid | MadoImagingStudy.series.uid  |  SR-TID1602:EV (112002, DCM, “Series Instance UID”)     |  |
+| Study  series.number | MadoImagingStudy.series.number  |  SR-TID1602:EV (113607, DCM, “Series Number”)     |  |
 | Study  series.seriesModality | MadoImagingStudy.series.modality  |  SR-TID1602:EV (121139, DCM, "Modality")     |  |
-| Study  series.description | MadoImagingStudy.series.description  |  SR-TID1602:EV (ddd002, DCM, “Series Description”)     |  |
-| Study  series.numberOfInstances | MadoImagingStudy.series.numberOfInstances  |  SR-TID1602:EV (ddd007, DCM, “Number of Series Related Instances”)      |  |
+| Study  series.description | MadoImagingStudy.series.description  |  SR-TID1602:EV (MADOTEMP002, DCM, “Series Description”)     |  |
+| Study  series.numberOfInstances | MadoImagingStudy.series.numberOfInstances  |  SR-TID1602:EV (MADOTEMP007, DCM, “Number of Series Related Instances”)      |  |
 | Study  series.seriesEndpoint | MadoImagingStudy |       |  |
 | Study  series.bodySite | MadoImagingStudy.series.bodySite  |  SR-TID1602:EV (123014, DCM, "Target Region")     |  |
 | Study  series.specimen | MadoImagingStudy.series.specimen  |       |  |
-| Study  series.started | MadoImagingStudy.series.started  |  SR-TID1602:EV (ddd003, DCM, "Series Date")  +  SR-TID1602:EV (ddd004, DCM, "Series Time")   |  |
+| Study  series.started | MadoImagingStudy.series.started  |  SR-TID1602:EV (MADOTEMP003, DCM, "Series Date")  +  SR-TID1602:EV (MADOTEMP004, DCM, "Series Time")   |  |
 | Study  series.instancesInTheSeries | MadoImagingStudy.series.instance  |       |  |
 | Study  series.instancesInTheSeries.instanceTitle | MadoImagingStudy.series.instance.title  |       |  |
-| Study  series.instancesInTheSeries.instanceUid | MadoImagingStudy.series.instance.uid  |  SR-TID1601:EV (ddd008, DCM, “Instance Number”)     |  |
+| Study  series.instancesInTheSeries.instanceUid | MadoImagingStudy.series.instance.uid  |  SR-TID1601:EV (112002, DCM, “Instance Number”)     |  |
 | Study  series.instancesInTheSeries.instanceUid | MadoImagingStudy.series.instance[representative]  |  SR-TID2010:8  +  SR-TID2010:9  +  SR-TID2010:10 |  |
 | Study  series.instancesInTheSeries.sopClass | MadoImagingStudy.series.instances.sopClass  |       |  |
-| Study  series.instancesInTheSeries.instanceNumber | MadoImagingStudy.series.instance.number  |  SR-TID1601:EV (ddd008, DCM, “Instance Number”)     |  |
+| Study  series.instancesInTheSeries.instanceNumber | MadoImagingStudy.series.instance.number  |  SR-TID1601:EV (112002, DCM, “Instance Number”)     |  |
 | Study  series.instancesInTheSeries.numberOfFrames | MadoImagingStudy.series.instance.extension[numberOfFrames]  |  SR-TID1601:EV (121140, DCM, “Number of Frames”)     |  |
 |   |    |       |  |
 |   |    |       |  |
