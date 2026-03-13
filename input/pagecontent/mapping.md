@@ -14,9 +14,9 @@ expected that the concept will be present in each of them.
 | Study Started | MadoImagingStudy.started  | GeneralStudy StudyDate  +  StudyTime   |  |
 | Study anatomicalRegion | MadoImagingStudy.extension[anatomicalRegion]  |  SR-TID1600:EV (123014, DCM, "Target Region")     |  |
 | Study Description | MadoImagingStudy.description  | GeneralStudy StudyDescription     |  |
-| Study endpoint | MadoImagingStudy.endpoint -> XcWadoEndpoint  | KeyObjectDocument-CurrentRequestedProcedureEvidenceSequence-Retrieve Location UID      |  |
-| Study endpoint.locationUid | MadoImagingStudy.endpoint -> XcWadoEndpoint.extension[locationUid]  | KeyObjectDocument-CurrentRequestedProcedureEvidenceSequence-Retrieve URL      |  |
-| Study endpoint.url | MadoImagingStudy.endpoint -> XcWadoEndpoint.address  |       |  |
+| Study endpoint | MadoImagingStudy.endpoint -> XcWadoEndpoint  |     |  |
+| Study endpoint.locationUid | MadoImagingStudy.endpoint -> XcWadoEndpoint.extension[locationUid]  | KeyObjectDocument-CurrentRequestedProcedureEvidenceSequence-Retrieve Location UID |  |
+| Study endpoint.url | MadoImagingStudy.endpoint -> XcWadoEndpoint.address  | KeyObjectDocument-CurrentRequestedProcedureEvidenceSequence-Retrieve URL      |  |
 | Study  series | MadoImagingStudy.series  |       |  |
 | Study  series.seriesUid | MadoImagingStudy.series.uid  |  SR-TID1602:EV (112002, DCM, “Series Instance UID”)     |  |
 | Study  series.number | MadoImagingStudy.series.number  |  SR-TID1602:EV (113607, DCM, “Series Number”)     |  |
