@@ -23,12 +23,14 @@ related to body-site and modality, and the definition on where `StudyInstanceUID
 
 // content profile representation
 * content 1..1
+  * attachment 1..1
+    * contentType = #application/fhir+json
+  * format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:rad:MADO:fhir-manifest:2026" // pending
   * extension contains  http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile named profile 1..*
   * extension[profile]
     * ^short = "Contains the profile of the referred report"
     * extension[value[x]]
       * valueCanonical = Canonical( MadoFhirBundle )
-* content.format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:rad:MADO:fhir-manifest:2026" // pending
 
 Profile: MadoDicomKosMinimalDocumentReference
 Parent: IHE.MHD.Minimal.DocumentReference
@@ -47,7 +49,10 @@ related to body-site and modality, and the definition on where `StudyInstanceUID
   * ^short = "Reference to the DocumentReference resource that contains the FHIR manifest that corresponds to this imaging report in DICOM KOS format"
   * code = #transforms
   * target only Reference( MadoFhirMinimalDocumentReference )
-* content.format = http://dicom.nema.org/resources/ontology/DCMUID#1.2.840.10008.5.1.4.1.1.88.59	"Key Object Selection Document"
+* content
+  * attachment 1..1
+    * contentType = #application/dicom
+  * format = http://dicom.nema.org/resources/ontology/DCMUID#1.2.840.10008.5.1.4.1.1.88.59	"Key Object Selection Document"
 
 
 RuleSet: CommonMhdDocumentReferenceFields

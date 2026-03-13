@@ -27,7 +27,7 @@ Usage: #example
 
 * content[+]
   * attachment[+]
-    * contentType = #application/fhir+json
+    * contentType = #application/dicom
     * url = "Binary/mado-kos-manifest-binary"
     * language = #de-DE
     * creation = "2025-05-08T00:00:00Z"
