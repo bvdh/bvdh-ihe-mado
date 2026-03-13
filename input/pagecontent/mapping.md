@@ -21,12 +21,12 @@ expected that the concept will be present in each of them.
 | Study  series.seriesUid | MadoImagingStudy.series.uid  |  SR-TID1602:EV (112002, DCM, “Series Instance UID”)     |  |
 | Study  series.number | MadoImagingStudy.series.number  |  SR-TID1602:EV (113607, DCM, “Series Number”)     |  |
 | Study  series.seriesModality | MadoImagingStudy.series.modality  |  SR-TID1602:EV (121139, DCM, "Modality")     |  |
-| Study  series.description | MadoImagingStudy.series.description  |  SR-TID1602:EV (MADOTEMP002, DCM, “Series Description”)     |  |
-| Study  series.numberOfInstances | MadoImagingStudy.series.numberOfInstances  |  SR-TID1602:EV (MADOTEMP007, DCM, “Number of Series Related Instances”)      |  |
+| Study  series.description | MadoImagingStudy.series.description  |  SR-TID1602:EV (MADOTEMP002, 99IHE, “Series Description”)     |  |
+| Study  series.numberOfInstances | MadoImagingStudy.series.numberOfInstances  |  SR-TID1602:EV (MADOTEMP007, 99IHE, “Number of Series Related Instances”)      |  |
 | Study  series.seriesEndpoint | MadoImagingStudy |       |  |
 | Study  series.bodySite | MadoImagingStudy.series.bodySite  |  SR-TID1602:EV (123014, DCM, "Target Region")     |  |
 | Study  series.specimen | MadoImagingStudy.series.specimen  |       |  |
-| Study  series.started | MadoImagingStudy.series.started  |  SR-TID1602:EV (MADOTEMP003, DCM, "Series Date")  +  SR-TID1602:EV (MADOTEMP004, DCM, "Series Time")   |  |
+| Study  series.started | MadoImagingStudy.series.started  |  SR-TID1602:EV (MADOTEMP003, 99IHE, "Series Date")  +  SR-TID1602:EV (MADOTEMP004, 99IHE, "Series Time")   |  |
 | Study  series.instancesInTheSeries | MadoImagingStudy.series.instance  |       |  |
 | Study  series.instancesInTheSeries.instanceTitle | MadoImagingStudy.series.instance.title  |       |  |
 | Study  series.instancesInTheSeries.instanceUid | MadoImagingStudy.series.instance.uid  |  SR-TID1601:EV (112002, DCM, “Instance Number”)     |  |
